@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:report": "newman run TodoListApp/collections/Backend-workshop.postman_collection.json -e TodoListApp/envVariables/TodoList.postman_environment.json -r htmlextra --reporter-htmlextra-export TodoListApp/reports/`date +%Y-%m-%d_%H:%M:%S`/report.html",
+    "test:newman": "newman run TodoListApp/collections/Backend-workshop.postman_collection.json -e TodoListApp/envVariables/TodoList.postman_environment.json"
   },
   "repository": {
     "type": "git",
